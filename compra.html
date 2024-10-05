@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra - Blank Sales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <img src="sua-imagem.jpg" alt="Logo da Blank Sales" class="logo">
+    <h1>Finalizar Compra</h1>
+    <nav>
+        <a href="index.html" class="nav-link">Início</a>
+        <a href="produtos.html" class="nav-link">Produtos</a>
+        <a href="https://discord.gg/seu-link" class="nav-link">Servidor do Discord</a>
+    </nav>
+</header>
+
+<section class="compra">
+    <h2>Realizar Pagamento</h2>
+    <p id="produto-info"></p>
+    <p><strong>Chave Pix:</strong> seu-email@exemplo.com</p> <!-- Substitua pela sua chave Pix -->
+    <img src="seu-qr-code.png" alt="QR Code do Pix" class="qr-code"> <!-- Substitua pelo seu QR Code -->
+    <p>Após a transferência, envie um print no servidor.</p>
+</section>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const produto = params.get('produto');
+    document.getElementById('produto-info').innerText = `Você está comprando: ${produto}`;
+</script>
+
+</body>
+</html>
